@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>م. ولاء سرحان — خبيرة حوكمة وإدارة المياه ومفتش ري</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        water: {
+                            800: '#0c2340',
+                            900: '#07162c',
+                            950: '#040b17'
+                        },
+                        accent: {
+                            primary: '#0ea5e9', // Sky blue representing water
+                            secondary: '#38bdf8',
+                            cyan: '#2dd4bf'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Cairo', 'Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-15px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts (Cairo for Arabic) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #07162c;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(12, 35, 64, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(56, 189, 248, 0.12);
+        }
+        .glow-effect {
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, rgba(7, 22, 44, 0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-water-900 text-slate-100 relative selection:bg-accent-primary selection:text-white">
+
+    <!-- Background Ambient Glows -->
+    <div class="glow-effect top-0 right-1/4 -translate-x-1/2"></div>
+    <div class="glow-effect top-1/2 left-10"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-sky-900/50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl sm:text-2xl font-extrabold tracking-tight bg-gradient-to-l from-accent-primary via-accent-secondary to-accent-cyan bg-clip-text text-transparent flex items-center gap-2">
+                <i class="fa-solid fa-droplet text-accent-primary"></i>
+                م. ولاء سرحان
+            </a>
+            
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex items-center space-x-8 space-x-reverse text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-accent-cyan transition-colors">نبذة عني</a>
+                <a href="#expertise" class="hover:text-accent-cyan transition-colors">مجالات الخبرة</a>
+                <a href="#experience" class="hover:text-accent-cyan transition-colors">الخبرات المهنية</a>
+                <a href="#achievements" class="hover:text-accent-cyan transition-colors">الإنجازات</a>
+                <a href="#contact" class="hover:text-accent-cyan transition-colors">تواصل معي</a>
+                <a href="#contact" class="px-5 py-2.5 rounded-full bg-gradient-to-l from-accent-primary to-accent-secondary text-water-950 font-bold shadow-lg shadow-sky-500/25 hover:shadow-sky-500/40 transition-all transform hover:-translate-y-0.5">
+                    احجز استشارة / تواصل
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none p-2" aria-label="القائمة">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden glass-card border-t border-sky-900/50 px-6 py-6 space-y-4">
+            <a href="#about" class="block text-slate-300 hover:text-accent-cyan font-medium mobile-link">نبذة عني</a>
+            <a href="#expertise" class="block text-slate-300 hover:text-accent-cyan font-medium mobile-link">مجالات الخبرة</a>
+            <a href="#experience" class="block text-slate-300 hover:text-accent-cyan font-medium mobile-link">الخبرات المهنية</a>
+            <a href="#achievements" class="block text-slate-300 hover:text-accent-cyan font-medium mobile-link">الإنجازات</a>
+            <a href="#contact" class="block text-slate-300 hover:text-accent-cyan font-medium mobile-link">تواصل معي</a>
+            <div class="pt-2">
+                <a href="#contact" class="block text-center w-full py-3 rounded-xl bg-gradient-to-l from-accent-primary to-accent-secondary text-water-950 font-bold shadow-lg shadow-sky-500/20 mobile-link">
+                    تواصل معي
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-28 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-right">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-accent-cyan text-xs sm:text-sm font-semibold tracking-wide border border-accent-cyan/20 animate-pulse-slow">
+                    <span class="w-2 h-2 rounded-full bg-accent-cyan animate-ping"></span>
+                    أكثر من 15 عاماً من الخبرة في إدارة المياه بمصر
+                </div>
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
+                    حوكمة وإدارة المياة <br><span class="bg-gradient-to-l from-accent-primary via-accent-secondary to-accent-cyan bg-clip-text text-transparent">لاستدامة المستقبل</span>
+                </h1>
+                <p class="text-slate-300 text-lg sm:text-xl font-normal max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                    مرحباً بكم، أنا <span class="text-accent-cyan font-bold">ولاء سرحان</span>. مفتش ري متخصص في حوكمة وإدارة المياه بمحافظة الشرقية. أكرس جهودي لتطوير شبكات الري، ترشيد استهلاك الموارد المائية، وحمايتها وفق أحدث المعايير الاستراتيجية في مصر.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#experience" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-l from-accent-primary to-accent-secondary text-water-950 font-bold shadow-xl shadow-sky-500/30 hover:scale-105 transition-all text-center">
+                        استكشف مسيرتي المهنية <i class="fa-solid fa-arrow-left mr-2"></i>
+                    </a>
+                    <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-card hover:bg-water-800 text-slate-200 font-semibold border border-sky-800/60 transition-all text-center">
+                        تواصل مهني
+                    </a>
+                </div>
+                <!-- Social & Professional Links -->
+                <div class="flex items-center justify-center lg:justify-start space-x-6 space-x-reverse pt-6 text-slate-400 text-xl">
+                    <a href="mailto:walaa.sarhan@water.gov.eg" class="hover:text-accent-cyan transition-colors" title="البريد الإلكتروني"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="hover:text-accent-cyan transition-colors" title="لينكد إن"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com" target="_blank" class="hover:text-accent-cyan transition-colors" title="جيت هب"><i class="fa-brands fa-github"></i></a>
+                    <a href="tel:+201000000000" class="hover:text-accent-cyan transition-colors" title="اتصال مباشر"><i class="fa-solid fa-phone"></i></a>
+                </div>
+            </div>
+
+            <!-- Hero Visual Card / Professional Badge -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative w-72 h-72 sm:w-96 sm:h-96 animate-float">
+                    <div class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-accent-primary via-accent-cyan to-water-800 opacity-30 blur-2xl"></div>
+                    <div class="relative w-full h-full glass-card rounded-3xl p-6 flex flex-col justify-between border border-sky-800/50 shadow-2xl">
+                        <div class="flex items-center justify-between">
+                            <div class="flex space-x-2 space-x-reverse">
+                                <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                            </div>
+                            <span class="text-xs text-accent-cyan font-mono">Sharkia.Water.Profile</span>
+                        </div>
+                        <div class="space-y-3 font-mono text-xs sm:text-sm text-slate-300">
+                            <p class="text-accent-cyan">&gt; const expert = {</p>
+                            <p class="pr-4">name: <span class="text-emerald-400">"ولاء سرحان"</span>,</p>
+                            <p class="pr-4">role: <span class="text-emerald-400">"مفتش ري"</span>,</p>
+                            <p class="pr-4">region: <span class="text-emerald-400">"محافظة الشرقية، مصر"</span>,</p>
+                            <p class="pr-4">experience: <span class="text-amber-400">"15+ سنة"</span>,</p>
+                            <p class="pr-4">focus: <span class="text-emerald-400">"حوكمة الموارد المائية"</span></p>
+                            <p class="text-accent-cyan">};</p>
+                        </div>
+                        <div class="pt-4 border-t border-sky-900/50 flex items-center justify-between text-xs text-slate-400">
+                            <span>وزارة الموارد المائية والري</span>
+                            <span class="text-emerald-400 flex items-center gap-1"><i class="fa-solid fa-circle text-[8px]"></i> نشط ميدانياً</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">نبذة تعريفية</h2>
+            <div class="w-20 h-1 bg-gradient-to-l from-accent-primary to-accent-cyan mx-auto mt-4 rounded-full"></div>
+            <p class="text-slate-300 mt-4 text-base sm:text-lg">خبرة عميقة في الرقابة، التخطيط، وحوكمة المياه في محافظة الشرقية وقلب الدلتا.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6 glass-card p-8 rounded-3xl border border-sky-800/50 shadow-xl space-y-6">
+                <h3 class="text-2xl font-semibold text-slate-100">رؤية هندسية لإدارة مستدامة للمياه في مصر</h3>
+                <p class="text-slate-300 leading-relaxed">
+                    أعمل كـ **مفتش ري بمحافظة الشرقية**، ولدي مسيرة مهنية امتدت لأكثر من 15 عاماً في التعامل مع التحديات المائية المعقدة، توزيع الحصص المائية، الإشراف على شبكات الترع والصرف، وتطبيق قواعد الحوكمة الرشيدة للمياه.
+                </p>
+                <p class="text-slate-300 leading-relaxed">
+                    تتضمن مسيرتي قيادة فرق التفتيش الميداني، رصد التعديات وحماية أملاك الري، والمساهمة في تنفيذ المشروع القومي لتأهيل الترع والتحول لأنظمة الري الحديث لرفع كفاءة الاستخدام المائي بالمحافظة.
+                </p>
+                <div class="grid grid-cols-2 gap-4 pt-2">
+                    <div class="p-4 rounded-2xl bg-water-950/60 border border-sky-900/40">
+                        <span class="block text-3xl font-extrabold text-accent-cyan">+15</span>
+                        <span class="text-xs text-slate-400 font-medium">سنة خبرة تخصصية</span>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-water-950/60 border border-sky-900/40">
+                        <span class="block text-3xl font-extrabold text-accent-secondary">الشرقية</span>
+                        <span class="text-xs text-slate-400 font-medium">نطاق العمل الأساسي</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Pillars -->
+            <div class="lg:col-span-6 space-y-6">
+                <div class="glass-card p-6 rounded-2xl border border-sky-800/50 flex items-start gap-4">
+                    <div class="p-3 rounded-xl bg-sky-500/10 text-accent-primary text-xl ml-2">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold text-slate-200">حوكمة وتشريعات المياه</h4>
+                        <p class="text-sm text-slate-300 mt-1">تطبيق القوانين المنظمة للري والصرف، وضمان عدالة توزيع المياه وحل النزاعات المائية بين المنتفعين بكفاءة.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border border-sky-800/50 flex items-start gap-4">
+                    <div class="p-3 rounded-xl bg-cyan-500/10 text-accent-cyan text-xl ml-2">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold text-slate-200">إدارة شبكات الري والصرف</h4>
+                        <p class="text-sm text-slate-300 mt-1">الإشراف الميداني على الجسور، القناطر، ومجاري المياه لضمان انسيابية التصرفات خلال مواسم أقصى الاحتياجات الزراعية.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border border-sky-800/50 flex items-start gap-4">
+                    <div class="p-3 rounded-xl bg-teal-500/10 text-accent-secondary text-xl ml-2">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold text-slate-200">حماية أملاك الدولة والجسور</h4>
+                        <p class="text-sm text-slate-300 mt-1">رصد وحسم التعديات على مجرى النيل والترع الرئيسية والفرعية، وحماية القطاع المائي من أي إعاقات.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10 bg-water-950/40 rounded-3xl border border-sky-900/60 my-12">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">مجالات التخصص والكفاءات</h2>
+            <div class="w-20 h-1 bg-gradient-to-l from-accent-primary to-accent-cyan mx-auto mt-4 rounded-full"></div>
+            <p class="text-slate-300 mt-4 text-base sm:text-lg">المهارات الفنية والإدارية المكتسبة طوال مسيرة العمل في هندسة وري المحافظة.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="glass-card p-6 rounded-2xl text-right flex flex-col justify-between border border-sky-800/40 hover:border-accent-cyan/50 transition-all group">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/10 flex items-center justify-center text-accent-primary text-xl">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                    </div>
+                    <span class="text-xs font-mono text-accent-cyan">التفتيش والمتابعة</span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-100">التفتيش الهيدروليكي والميداني</h3>
+                <p class="text-sm text-slate-300 mt-2">مراجعة مناسيب المياه، التصرفات، وحالة المنشآت المائية على الطبيعة بشكل دوري.</p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl text-right flex flex-col justify-between border border-sky-800/40 hover:border-accent-cyan/50 transition-all group">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-accent-cyan text-xl">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <span class="text-xs font-mono text-accent-cyan">التخطيط</span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-100">إدارة الأزمات المائية</h3>
+                <p class="text-sm text-slate-300 mt-2">وضع خطط الطوارئ للتعامل مع فترات أقصى الاحتياجات الصيفية ومواسم الأمطار السيول.</p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl text-right flex flex-col justify-between border border-sky-800/40 hover:border-accent-cyan/50 transition-all group">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-12 h-12 rounded-xl bg-teal-500/10 flex items-center justify-center text-accent-secondary text-xl">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                    <span class="text-xs font-mono text-accent-cyan">تأهيل الترع</span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-100">المشروعات القومية للري</h3>
+                <p class="text-sm text-slate-300 mt-2">الإشراف الفني ومتابعة تنفيذ أعمال تأهيل الترع وتحديث البنية الأساسية للمياه.</p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl text-right flex flex-col justify-between border border-sky-800/40 hover:border-accent-cyan/50 transition-all group">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/10 flex items-center justify-center text-accent-primary text-xl">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <span class="text-xs font-mono text-accent-cyan">التواصل المجتمعي</span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-100">روابط مستخدمي المياه</h3>
+                <p class="text-sm text-slate-300 mt-2">التنسيق المستمر مع المزارعين والروابط المحلية لنشر وعي ترشيد استهلاك المياه.</p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl text-right flex flex-col justify-between border border-sky-800/40 hover:border-accent-cyan/50 transition-all group">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-accent-cyan text-xl">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <span class="text-xs font-mono text-accent-cyan">التحول الرقمي</span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-100">نظم المعلومات والتقارير</h3>
+                <p class="text-sm text-slate-300 mt-2">استخدام الأدوات الرقمية وقواعد البيانات لإعداد التقارير الدورية لمتخذي القرار.</p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl text-right flex flex-col justify-between border border-sky-800/40 hover:border-accent-cyan/50 transition-all group">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-12 h-12 rounded-xl bg-teal-500/10 flex items-center justify-center text-accent-secondary text-xl">
+                        <i class="fa-solid fa-book-bookmark"></i>
+                    </div>
+                    <span class="text-xs font-mono text-accent-cyan">السياسات</span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-100">استراتيجيات الأمن المائي</h3>
+                <p class="text-sm text-slate-300 mt-2">المساهمة في دراسات استراتيجية إدارة الموارد المائية ورؤية مصر 2030.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section id="experience" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">المسار المهني والخبرات</h2>
+            <div class="w-20 h-1 bg-gradient-to-l from-accent-primary to-accent-cyan mx-auto mt-4 rounded-full"></div>
+            <p class="text-slate-300 mt-4 text-base sm:text-lg">محطات رئيسية في العمل الإداري والميداني بقطاع الري في محافظة الشرقية.</p>
+        </div>
+
+        <div class="max-w-4xl mx-auto space-y-8">
+            <div class="glass-card p-6 sm:p-8 rounded-3xl border border-sky-800/50 relative">
+                <div class="absolute -right-4 top-8 w-8 h-8 rounded-full bg-accent-primary text-water-950 font-bold flex items-center justify-center text-sm shadow-lg hidden sm:flex">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-950 text-accent-cyan border border-sky-800 inline-block mb-3">حتى الآن</span>
+                <h3 class="text-xl font-bold text-slate-100">مفتش ري أول وخبير حوكمة المياه</h3>
+                <h4 class="text-accent-secondary text-sm font-medium mt-1">مديرية الموارد المائية والري بمحافظة الشرقية</h4>
+                <p class="text-slate-300 text-sm mt-4 leading-relaxed">
+                    قيادة أعمال التفتيش الميداني والرقابة على شبكات الترع والمساقي بمختلف مراكز المحافظة. الإشراف على تنفيذ خطط حوكمة المياه وتوزيع الحصص المائية بعدالة وحسم المخالفات والتعديات وفق القانون.
+                </p>
+            </div>
+
+            <div class="glass-card p-6 sm:p-8 rounded-3xl border border-sky-800/50 relative">
+                <div class="absolute -right-4 top-8 w-8 h-8 rounded-full bg-accent-primary text-water-950 font-bold flex items-center justify-center text-sm shadow-lg hidden sm:flex">
+                    <i class="fa-solid fa-water"></i>
+                </div>
+                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-950 text-accent-cyan border border-sky-800 inline-block mb-3">خبرة ميدانية متقدمة</span>
+                <h3 class="text-xl font-bold text-slate-100">مهندس ري وإدارة أصول هندسية</h3>
+                <h4 class="text-accent-secondary text-sm font-medium mt-1">إدارات الري التابعة بمحافظة الشرقية</h4>
+                <p class="text-slate-300 text-sm mt-4 leading-relaxed">
+                    إدارة تشغيل وصيانة المنشآت المائية، التنسيق مع غرف العمليات المركزية لإدارة أزمات المياه في فترات ذروة الاحتياجات الزراعية، ومتابعة تنفيذ المشروعات القومية لتطوير شبكات الري.
+                </p>
+            </div>
+
+            <div class="glass-card p-6 sm:p-8 rounded-3xl border border-sky-800/50 relative">
+                <div class="absolute -right-4 top-8 w-8 h-8 rounded-full bg-accent-primary text-water-950 font-bold flex items-center justify-center text-sm shadow-lg hidden sm:flex">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-950 text-accent-cyan border border-sky-800 inline-block mb-3">التأسيس الأكاديمي والمهني</span>
+                <h3 class="text-xl font-bold text-slate-100">بداية المسيرة الهندسية</h3>
+                <h4 class="text-accent-secondary text-sm font-medium mt-1">وزارة الموارد المائية والري</h4>
+                <p class="text-slate-300 text-sm mt-4 leading-relaxed">
+                    الالتحاق بقطاع الري وبدء العمل الميداني والهندسي، واكتساب الخبرات المتراكمة في التعامل مع شبكات الترع والصرف والتعاون الوثيق مع مجتمعات المنتفعين والمزارعين.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements / Stats Section -->
+    <section id="achievements" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10 bg-gradient-to-l from-water-950 to-water-900 rounded-3xl border border-sky-900/60 my-12 text-center">
+        <div class="max-w-3xl mx-auto mb-12">
+            <h2 class="text-3xl font-bold tracking-tight">أبرز مؤشرات الإنجاز المهني</h2>
+            <div class="w-20 h-1 bg-gradient-to-l from-accent-primary to-accent-cyan mx-auto mt-4 rounded-full"></div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="space-y-2">
+                <span class="block text-4xl sm:text-5xl font-extrabold text-accent-cyan">+15</span>
+                <span class="text-sm text-slate-300 font-medium">عاماً من الخبرة</span>
+            </div>
+            <div class="space-y-2">
+                <span class="block text-4xl sm:text-5xl font-extrabold text-accent-secondary">الشرقية</span>
+                <span class="text-sm text-slate-300 font-medium">نطاق التغطية والمحافظة</span>
+            </div>
+            <div class="space-y-2">
+                <span class="block text-4xl sm:text-5xl font-extrabold text-accent-cyan">100%</span>
+                <span class="text-sm text-slate-300 font-medium">التزام بحوكمة المياه</span>
+            </div>
+            <div class="space-y-2">
+                <span class="block text-4xl sm:text-5xl font-extrabold text-accent-secondary">تخصص</span>
+                <span class="text-sm text-slate-300 font-medium">تفتيش وحوكمة ري</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">تواصل مهني</h2>
+            <div class="w-20 h-1 bg-gradient-to-l from-accent-primary to-accent-cyan mx-auto mt-4 rounded-full"></div>
+            <p class="text-slate-300 mt-4 text-base sm:text-lg">للاستفسارات الاستشارية، اللقاءات المهنية، أو التواصل الإداري.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-5xl mx-auto">
+            <!-- Contact Info -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="glass-card p-6 rounded-3xl border border-sky-800/50 space-y-6">
+                    <h3 class="text-xl font-semibold text-slate-100">معلومات الاتصال</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 space-x-reverse text-slate-300">
+                            <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-accent-primary flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-400">البريد الإلكتروني</span>
+                                <a href="mailto:walaa.sarhan@water.gov.eg" class="font-medium hover:text-accent-cyan transition-colors">walaa.sarhan@water.gov.eg</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 space-x-reverse text-slate-300">
+                            <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 text-accent-cyan flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-400">الموقع</span>
+                                <span class="font-medium">محافظة الشرقية، مصر</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 space-x-reverse text-slate-300">
+                            <div class="w-12 h-12 rounded-2xl bg-teal-500/10 text-accent-secondary flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-shield-cat fa-briefcase"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-400">جهة العمل</span>
+                                <span class="font-medium">مديرية الموارد المائية والري</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="lg:col-span-7">
+                <form id="contact-form" class="glass-card p-8 rounded-3xl border border-sky-800/50 space-y-6 relative text-right">
+                    <!-- Success Toast Message Box (No Alert) -->
+                    <div id="form-success" class="hidden p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-medium flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-lg"></i>
+                        <span>شكراً لك! تم إرسال رسالتك بنجاح وسيتم الرد في أقرب وقت.</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label for="name" class="block text-sm font-medium text-slate-300">الاسم الكريم</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl bg-water-950/60 border border-sky-800/70 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-accent-cyan transition-colors text-right" placeholder="أحمد محمد">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="email" class="block text-sm font-medium text-slate-300">البريد الإلكتروني</label>
+                            <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl bg-water-950/60 border border-sky-800/70 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-accent-cyan transition-colors text-right" placeholder="name@example.com">
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label for="subject" class="block text-sm font-medium text-slate-300">موضوع الرسالة</label>
+                        <input type="text" id="subject" required class="w-full px-4 py-3 rounded-xl bg-water-950/60 border border-sky-800/70 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-accent-cyan transition-colors text-right" placeholder="استشارة / استفسار مهني">
+                    </div>
+                    <div class="space-y-2">
+                        <label for="message" class="block text-sm font-medium text-slate-300">النص أو التفاصيل</label>
+                        <textarea id="message" rows="4" required class="w-full px-4 py-3 rounded-xl bg-water-950/60 border border-sky-800/70 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-accent-cyan transition-colors resize-none text-right" placeholder="اكتب تفاصيل رسالتك هنا..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-l from-accent-primary to-accent-secondary text-water-950 font-bold shadow-lg shadow-sky-500/25 hover:shadow-sky-500/40 transition-all transform hover:-translate-y-0.5">
+                        إرسال الرسالة <i class="fa-solid fa-paper-plane mr-2"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-sky-900/50 py-8 px-4 sm:px-6 lg:px-8 text-center text-sm text-slate-400 relative z-10">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 م. ولاء سرحان. جميع الحقوق المحفوظة. تصميم مخصص للرفع على GitHub Pages.</p>
+            <div class="flex space-x-6 space-x-reverse text-slate-300">
+                <a href="mailto:walaa.sarhan@water.gov.eg" class="hover:text-accent-cyan transition-colors"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="hover:text-accent-cyan transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com" target="_blank" class="hover:text-accent-cyan transition-colors"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Contact Form Submission Simulation (Custom Toast instead of alert)
+        const contactForm = document.getElementById('contact-form');
+        const formSuccess = document.getElementById('form-success');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formSuccess.classList.remove('hidden');
+            contactForm.reset();
+            setTimeout(() => {
+                formSuccess.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
